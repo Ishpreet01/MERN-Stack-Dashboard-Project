@@ -10,8 +10,9 @@ const Layout = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");   //this value will be false for a mobile screen
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);  
   const userId=useSelector((state)=>state.global.userId);
+  console.log(userId);
   const { data } =useGetUserQuery(userId);
-  //console.log("data",data);
+  console.log("data",data);
 
   return (
   <Box  display={isNonMobile ? "flex" : "block"} width="100%" height="100%">
